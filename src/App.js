@@ -13,12 +13,13 @@ function App() {
   console.log("what is process.env in App", process.env)
 
   return (
-    <div className="App">
-      <Helmet>
+    <>
+          <Helmet>
         <meta charSet="utf-8" />
         <title>Jerms is here</title>
         <script type="text/javascript">
         {`
+        console.log("***** LOGGING FROM HELMET *****")
         console.log("what is window", window)
         console.log("what is window.process before setting", window.process)
       window.process = window.process || {}
@@ -26,13 +27,14 @@ function App() {
       process.env = process.env || {}
 
       process.env = Object.assign({}, process.env, {
-        REACT_APP_BACKEND_BASE_URL: "localhost:5000",
+        REACT_APP_BACKEND_BASE_URL2: "localhost:5002",
       });
       console.log("what is env?", process.env)
           `}
 
         </script>
       </Helmet>
+      <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -51,6 +53,8 @@ function App() {
         click me
       </div>
     </div>
+    </>
+
   );
 }
 
