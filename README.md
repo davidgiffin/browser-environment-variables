@@ -11,6 +11,11 @@ seems wouldn't be able to set the environment variables in time.
 This is a link to SO question where the answer basically says this isn't possible: 
 https://stackoverflow.com/questions/52871895/cant-set-values-on-process-env-in-client-side-javascript
 
+Create React App talks about replacing them but you have to use SSR: https://create-react-app.dev/docs/title-and-meta-tags/#injecting-data-from-the-server-into-the-page
+
+Which makes me wonder if there is a possibility of like a docker-esqe SSR solution? Like could we just take a statically
+built JS app and drop it into this "container" and it magically adds a minimal SSR solution?
+
 Relevant files are `App.js`, `config.js`, and `httpClient.js`
 
 ## Logs
